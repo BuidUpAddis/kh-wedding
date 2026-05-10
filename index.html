@@ -3,25 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta
       name="description"
       content="Digital wedding invitation for Kidus and Heran."
     />
+
     <meta property="og:title" content="Kidus & Heran Wedding Invitation" />
     <meta
       property="og:description"
       content="A digital wedding invitation card for Kidus and Heran."
     />
     <meta property="og:image" content="assets/kidus-heran-wedding-invite.png" />
+
     <title>Kidus & Heran Wedding Invitation</title>
+
     <link
       rel="preload"
       href="assets/kidus-heran-wedding-invite.png"
       as="image"
     />
     <link rel="preload" href="assets/kidus-heran-monogram.png" as="image" />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <main class="invitation-page" aria-labelledby="page-title">
       <h1 id="page-title" class="sr-only">
@@ -29,11 +35,9 @@
       </h1>
 
       <div class="ambient" aria-hidden="true">
-        <img
-          class="soft-backdrop"
-          src="assets/kidus-heran-wedding-invite.png"
-          alt=""
-        />
+        <!-- IMPORTANT: This is now a div, not the invitation image -->
+        <div class="soft-backdrop"></div>
+
         <div class="silk silk-one"></div>
         <div class="silk silk-two"></div>
         <div class="petal-field" id="petal-field"></div>
@@ -50,12 +54,16 @@
             aria-label="Open invitation"
           >
             <span class="cover-glow" aria-hidden="true"></span>
+
             <span class="cover-line cover-line-top" aria-hidden="true"></span>
             <span class="cover-line cover-line-bottom" aria-hidden="true"></span>
+
             <span class="cover-monogram" aria-hidden="true">K &amp; H</span>
+
             <span class="cover-ribbon" aria-hidden="true">
               <span class="ribbon-knot"></span>
             </span>
+
             <span class="flower-seal" aria-hidden="true">
               <span class="flower-petal petal-a"></span>
               <span class="flower-petal petal-b"></span>
@@ -65,6 +73,7 @@
               <span class="flower-petal petal-f"></span>
               <span class="flower-center"></span>
             </span>
+
             <span class="cover-copy" aria-hidden="true">
               <span>Open invitation</span>
               <small>Tap the ribbon</small>
@@ -73,6 +82,7 @@
 
           <div class="card-orbit" id="invite-panel">
             <div class="card-depth" aria-hidden="true"></div>
+
             <article class="invite-card" id="invite-card">
               <img
                 src="assets/kidus-heran-wedding-invite.png"
