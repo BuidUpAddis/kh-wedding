@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="am">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Digital wedding invitation for Kidus and Heran."
+    />
+    <meta property="og:title" content="Kidus & Heran Wedding Invitation" />
+    <meta
+      property="og:description"
+      content="A digital wedding invitation card for Kidus and Heran."
+    />
+    <meta property="og:image" content="assets/kidus-heran-wedding-invite.png" />
+    <title>Kidus & Heran Wedding Invitation</title>
+    <link
+      rel="preload"
+      href="assets/kidus-heran-wedding-invite.png"
+      as="image"
+    />
+    <link rel="preload" href="assets/kidus-heran-monogram.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="invitation-page" aria-labelledby="page-title">
+      <h1 id="page-title" class="sr-only">
+        Kidus and Heran wedding invitation
+      </h1>
+
+      <div class="ambient" aria-hidden="true">
+        <img
+          class="soft-backdrop"
+          src="assets/kidus-heran-wedding-invite.png"
+          alt=""
+        />
+        <div class="silk silk-one"></div>
+        <div class="silk silk-two"></div>
+        <div class="petal-field" id="petal-field"></div>
+      </div>
+
+      <section class="stage-shell" aria-label="Wedding invitation card">
+        <div class="stage gift-scene is-closed" id="stage">
+          <button
+            class="floral-cover"
+            id="cover-button"
+            type="button"
+            aria-controls="invite-card download-panel"
+            aria-expanded="false"
+            aria-label="Open invitation"
+          >
+            <span class="cover-glow" aria-hidden="true"></span>
+            <span class="cover-line cover-line-top" aria-hidden="true"></span>
+            <span class="cover-line cover-line-bottom" aria-hidden="true"></span>
+            <span class="cover-monogram" aria-hidden="true">K &amp; H</span>
+            <span class="cover-ribbon" aria-hidden="true">
+              <span class="ribbon-knot"></span>
+            </span>
+            <span class="flower-seal" aria-hidden="true">
+              <span class="flower-petal petal-a"></span>
+              <span class="flower-petal petal-b"></span>
+              <span class="flower-petal petal-c"></span>
+              <span class="flower-petal petal-d"></span>
+              <span class="flower-petal petal-e"></span>
+              <span class="flower-petal petal-f"></span>
+              <span class="flower-center"></span>
+            </span>
+            <span class="cover-copy" aria-hidden="true">
+              <span>Open invitation</span>
+              <small>Tap the ribbon</small>
+            </span>
+          </button>
+
+          <div class="card-orbit" id="invite-panel">
+            <div class="card-depth" aria-hidden="true"></div>
+            <article class="invite-card" id="invite-card">
+              <img
+                src="assets/kidus-heran-wedding-invite.png"
+                alt="Wedding invitation card for Kidus and Heran"
+                draggable="false"
+              />
+              <span class="card-shine" aria-hidden="true"></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-panel" id="download-panel" aria-live="polite">
+        <a
+          class="download-link"
+          href="assets/kidus-heran-wedding-invite.png"
+          download="Kidus-Heran-Wedding-Invitation.png"
+        >
+          Download invitation
+        </a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
