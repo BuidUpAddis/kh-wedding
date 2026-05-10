@@ -47,7 +47,16 @@ body {
   place-items: center;
   padding: 18px;
   isolation: isolate;
-  background: var(--paper);
+  background:
+    radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.82), transparent 30rem),
+    linear-gradient(120deg, #fffaf6, #ebd6cb),
+    repeating-linear-gradient(
+      94deg,
+      rgba(181, 139, 91, 0.05) 0,
+      rgba(181, 139, 91, 0.05) 1px,
+      transparent 1px,
+      transparent 42px
+    );
 }
 
 .ambient {
@@ -57,18 +66,22 @@ body {
   overflow: hidden;
   perspective: 900px;
   pointer-events: none;
-  background: var(--paper);
 }
 
+/* IMPORTANT: This is now a decorative div, not the invitation image */
 .soft-backdrop {
   position: absolute;
   top: 50%;
   left: 50%;
   width: min(78vw, 700px);
   height: min(112svh, 1080px);
-  object-fit: cover;
-  opacity: 0.08;
-  filter: blur(28px) saturate(0.65);
+  border-radius: 999px;
+  opacity: 1;
+  filter: blur(40px);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.95), transparent 38%),
+    radial-gradient(circle at 50% 60%, rgba(185, 147, 81, 0.18), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(234, 216, 205, 0.85), transparent 68%);
   transform: translate(-50%, -50%) scale(1.08);
   animation: backdrop-breathe 13s ease-in-out infinite;
 }
@@ -199,11 +212,12 @@ body {
   pointer-events: none;
 }
 
+/* IMPORTANT: No invitation image here anymore */
 .floral-cover::before {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(circle at 50% 34%, #ffffff 0%, #fffaf4 36%, #f8eee8 100%),
+    radial-gradient(circle at 50% 34%, #ffffff 0%, #fffaf4 38%, #f8eee8 100%),
     linear-gradient(180deg, #fffaf4 0%, #f8eee8 100%);
   background-position: center;
   background-size: cover;
@@ -427,6 +441,7 @@ body {
   letter-spacing: 0.16em;
 }
 
+/* IMPORTANT: Hide the real invitation card before opening */
 .card-orbit {
   top: 0;
   width: var(--card-w);
@@ -527,6 +542,7 @@ body {
   animation: flower-open 1.1s cubic-bezier(0.18, 0.72, 0.12, 1) forwards;
 }
 
+/* Show invitation only after opening */
 .gift-scene.is-revealed .card-orbit {
   opacity: 1;
   visibility: visible;
